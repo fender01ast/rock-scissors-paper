@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Камень, ножницы, бумага</title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="images/favicon.ico" rel="apple-touch-icon">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v1.7" />
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="choice__container">
+		<div style="width:100%;text-align:center;margin-bottom:20px;">Сделайте ваш ход:</div>
+		<div class="choice" id="kamen">Камень</div>
+		<div class="choice" id="nozh">Ножницы</div>
+		<div class="choice"	id="bumaga">Бумага</div>
+	</div>
+	<div class="player__result"></div>
+	<div class="comp__result"></div>
+	<div class="count__result"></div>
+	<div class="rating__wrapper">
+		<div class="results__wrapper">Побед: <div class="wins"> 0</div></div>
+		<div class="results__wrapper">Ничьих: <div class="draws"> 0</div></div>
+		<div class="results__wrapper">Поражений: <div class="loses"> 0</div></div>
+		<div class="results__wrapper">Доля побед: <div class="winrate"> 0 %</div></div>
+		<div class="results__wrapper">Игр сыграно: <div class="all-games"> 0</div></div>
+		<div class="obnovlenie-statov">Обновить статистику</div>
+	</div>
+</div>
+<div class="left-img">
+	<img src="images/rock.png" class="game-img" id="rock-img">
+	<img src="images/scissors.png" class="game-img" id="scissors-img">
+	<img src="images/paper.png" class="game-img" id="paper-img">
+</div>
+<div class="right-img">
+	<img src="images/rock.png" class="game-img" id="rock-img">
+	<img src="images/scissors.png" class="game-img" id="scissors-img">
+	<img src="images/paper.png" class="game-img" id="paper-img">
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/app.js?v1.1"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(74628805, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/74628805" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
