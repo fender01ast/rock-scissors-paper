@@ -102,9 +102,20 @@ $(document).ready(function(){
 		} else if ($(this).is('#nozh')) {
 			$('.player__result').text('Ваш ход: Ножницы');
 			playerChoice = 2;
-		} else {
+		} else if ($(this).is('#bumaga')){
 			$('.player__result').text('Ваш ход: Бумага');
 			playerChoice = 3;
+		} else {
+			playerChoice = randomInteger(1, 3);
+			if (playerChoice == 1) {
+				$('.player__result').text('Ваш ход: Камень');
+			}
+			if (playerChoice == 2) {
+				$('.player__result').text('Ваш ход: Ножницы');
+			}
+			if (playerChoice == 3) {
+				$('.player__result').text('Ваш ход: Бумага');
+			}
 		}
 		
 		compRandomNum = randomInteger(1, 3);	// ход компьютера
