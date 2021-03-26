@@ -46,7 +46,8 @@ $(document).ready(function(){
 		},500);
 	}
 	function handMoves(){		//animation left side (player)
-		$('.choice,.player__result,.comp__result,.count__result').css({'display':'none'});
+		$('.choice,.player__result,.comp__result,.count__result,.choice__description').css({'display':'none'});
+		$('.lds-ring').css({'display':'inline-block'});
 		$('.choice__container').css({'height':'150px'});
 		$('.left-img>#rock-img,.right-img>#rock-img').css({'display':'block'});
 		$('.left-img>#scissors-img,.right-img>#scissors-img').css({'display':'none'});
@@ -74,7 +75,8 @@ $(document).ready(function(){
 				$('.right-img>#rock-img').css({'display':'none'});
 				$('.right-img>#scissors-img').css({'display':'block'});
 			}
-			$('.choice,.player__result,.comp__result,.count__result').css({'display':'block'});
+			$('.choice,.player__result,.comp__result,.count__result,.choice__description').css({'display':'block'});
+			$('.lds-ring').css({'display':'none'});
 			$('.choice__container').css({'height':'auto'});
 		},1500);
 	}
