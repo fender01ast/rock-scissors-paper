@@ -1,3 +1,22 @@
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+    get: function () {
+        return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+    }
+});
+
+jQuery('body').on('click touchstart', function () {
+    const videoElement = document.getElementById('myVideo');
+    if (videoElement.playing) {
+        // video is already playing so do nothing
+    }
+    else {
+        // video is not playing
+        // so play video now
+        videoElement.play();
+    }
+});
+
+
 $(window).on('load', function() {
 	//setTimeout(function(){
 		$('.preloader-rsp').fadeOut().end().delay(900).fadeOut('slow');
@@ -138,34 +157,36 @@ $(document).ready(function(){
 		}
 
 		setTimeout(function(){
-		if (playerChoice === compRandomNum) {		// calculation
-			draw();
-		}
-		if (playerChoice == 1 && compRandomNum == 2) {
-			win();
-		}
-		if (playerChoice == 1 && compRandomNum == 3) {
-			lose();
-		}
-		if (playerChoice == 2 && compRandomNum == 1) {
-			lose();
-		}
-		if (playerChoice == 2 && compRandomNum == 3) {
-			win();
-		}
-		if (playerChoice == 3 && compRandomNum == 1) {
-			win();
-		}
-		if (playerChoice == 3 && compRandomNum == 2) {
-			lose();
-		}
+			if (playerChoice === compRandomNum) {		// calculation
+				draw();
+			}
+			if (playerChoice == 1 && compRandomNum == 2) {
+				win();
+			}
+			if (playerChoice == 1 && compRandomNum == 3) {
+				lose();
+			}
+			if (playerChoice == 2 && compRandomNum == 1) {
+				lose();
+			}
+			if (playerChoice == 2 && compRandomNum == 3) {
+				win();
+			}
+			if (playerChoice == 3 && compRandomNum == 1) {
+				win();
+			}
+			if (playerChoice == 3 && compRandomNum == 2) {
+				lose();
+			}
 
-		winRate = wins * 100 / (wins + loses + draws);		// подсчет и вывод доли побед
-		$('.winrate').text(Math.floor(winRate) + ' %');
-		$('.all-games').text(wins + loses + draws);
+			winRate = wins * 100 / (wins + loses + draws);		// подсчет и вывод доли побед
+			$('.winrate').text(Math.floor(winRate) + ' %');
+			$('.all-games').text(wins + loses + draws);
 		},1499);
 	});
 
-	$('.obnovlenie-statov').click(function(){obnovlenieStatov();});  //обновление статистики
+	$('.obnovlenie-statov').click(function() {   //обновление статистики
+		obnovlenieStatov();
+	});  
 
 });
