@@ -1,3 +1,10 @@
+$(window).on('load', function() {
+	//setTimeout(function(){
+		$('.preloader-rsp').fadeOut().end().delay(900).fadeOut('slow');
+	//},500);
+});
+
+
 $(document).ready(function(){
 
 	let playerChoice;
