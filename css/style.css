@@ -10,7 +10,7 @@ body{
 	font-size: 24px;
 	width: 100vw;
 	height: 100vh;
-	background-image: url(../images/bg-img.jpg);
+	background-image: url(../images/screenshot-bg.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -131,6 +131,7 @@ body{
 }
 .left-img #rock-img{
 	transform: rotateY(180deg);
+	z-index: 2;
 }
 .right-img #scissors-img,
 .right-img #paper-img{
@@ -285,6 +286,7 @@ body{
 		font-size: 16px;
 		background-attachment: fixed;
 		height: 870px;
+		background-position: 100% 100%;
 	}
 	.rating__wrapper{
 		max-width: 90%;
