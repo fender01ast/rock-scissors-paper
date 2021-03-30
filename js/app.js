@@ -4,7 +4,8 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
 	}
 });
 
-jQuery('body').on('click touchstart', function () {
+//jQuery('body').on('click touchstart', function () {
+$(document).ready(function(){
 	const videoElement = document.getElementById('myVideo');
 	if (videoElement.playing) {
 		// video is already playing so do nothing
