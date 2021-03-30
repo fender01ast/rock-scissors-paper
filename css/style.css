@@ -130,7 +130,7 @@ body{
 	transition: .2s linear all;
 }
 .left-img #rock-img{
-	transform: rotateY(180deg);
+	/*transform: rotateY(180deg);*/
 	z-index: 2;
 }
 .right-img #scissors-img,
