@@ -1,22 +1,3 @@
-Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-	get: function () {
-		return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
-	}
-});
-
-jQuery('body').on('click touchstart', function () {
-	const videoElement = document.getElementById('myVideo');
-	if (videoElement.playing) {
-		// video is already playing so do nothing
-	}
-	else {
-		// video is not playing
-		// so play video now
-		videoElement.play();
-	}
-});
-
-
 $(window).on('load', function() {
 	//setTimeout(function(){
 		$('.preloader-rsp').fadeOut().end().delay(900).fadeOut('slow');
@@ -25,6 +6,26 @@ $(window).on('load', function() {
 
 
 $(document).ready(function(){
+
+	Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+		get: function () {
+			return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+		}
+	});
+
+	$('body').on('click touchstart', function () {
+		const videoElement = document.getElementById('myVideo');
+		if (videoElement.playing) {
+			// video is already playing so do nothing
+		}
+		else {
+			// video is not playing
+			// so play video now
+			videoElement.play();
+		}
+	});
+
+	
 
 	let playerChoice;
 	let compRandomNum;
